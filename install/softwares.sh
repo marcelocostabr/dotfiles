@@ -8,12 +8,25 @@ brew cask
 
 cask=(
   "google-chrome"
+  "microsoft-edge"
   "iterm2"
   "visual-studio-code"
-  "psequel"
+  "sublime-text"
   "transmission"
-  "stremio"
+  "dropbox"
   "spotify"
+  "docker"
+  "franz"
+  "istat-menus"
+  "doxie"
+  "figma"
+  "github"
+  "lastpass"
+  "onyx"
+  "sequel-pro"
+  "pocket-casts"
+  "vlc"
+  "colour-contrast-analyser"
 )
 
 for app in "${cask[@]}"; do
