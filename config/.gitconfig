@@ -1,13 +1,13 @@
 [alias]
 
-    # View abbreviated SHA, description, and history graph of the latest 20 commits
-    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+    # View abbreviated SHA, description, Author, Relative Date and history graph
+    l = !git log --pretty=format:'%C(blue) %h %C(red)%d %C(white) %s - %C(cyan)%cn, %C(green)%cr' --graph
 
     # View the current working tree status using the short format
     s = status -s
 
     # Add and Commit
-    c = add --all & commit -m
+    c = !git add --all && git commit -m
 
     # List contributors with number of commits
     contributors = shortlog --summary --numbered
@@ -92,14 +92,5 @@
 [url "git://gist.github.com/"]
 
     insteadOf = "gist:"
-[user]
-	name = Marcelo Costa
-	email = marcelo@mcosta.dev
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-
 
 
